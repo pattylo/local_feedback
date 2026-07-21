@@ -8,7 +8,7 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
 
-    server_arg = DeclareLaunchArgument('server', default_value='192.168.0.117')
+    server_arg = DeclareLaunchArgument('server', default_value='192.168.20.49')
     port_arg = DeclareLaunchArgument('port', default_value='3883')
     vrpn_topic_arg = DeclareLaunchArgument(
         'vrpn_topic',
@@ -46,7 +46,7 @@ def generate_launch_description():
     )
 
     vrpn_relay = Node(
-        package='vicon_misc',
+        package='local_feedback',
         executable='vrpn_relay',
         name='vrpn_relay',
         
