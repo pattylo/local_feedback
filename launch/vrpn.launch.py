@@ -8,16 +8,16 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
 
-    server_arg = DeclareLaunchArgument('server', default_value='192.168.20.49')
+    server_arg = DeclareLaunchArgument('server', default_value='192.168.8.218')
     port_arg = DeclareLaunchArgument('port', default_value='3883')
     vrpn_topic_arg = DeclareLaunchArgument(
         'vrpn_topic',
-        default_value='/vrpn_mocap/a_p0/pose'
+        default_value='/vrpn_mocap/rover0/pose'
     )
 
     out_topic_arg = DeclareLaunchArgument(
         'out_topic',
-        default_value='/mavros/vision_pose/pose'
+        default_value='/rover0/mavros/vision_pose/pose'
     )
 
     out_frame_arg = DeclareLaunchArgument(
